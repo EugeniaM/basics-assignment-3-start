@@ -1,0 +1,8 @@
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.white-text {
+  color: white;
+}

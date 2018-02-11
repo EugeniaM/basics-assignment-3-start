@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="contents">
+        <div>
+          <button
+            class="btn btn-primary"
+            (click)="toggleDisplayDetails()"
+          >
+            Display Details
+          </button>
+          <p *ngIf="detailsDisplayed">Some data goes here!</p>
+        </div>
+        <div class="logs">
+          <p
+            *ngFor="let log of actionLogs; let index = index"
+            [ngStyle]="{backgroundColor: getColor(index)}"
+            [ngClass]="{'white-text': index >= 4}"
+          >
+            {{ log }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
